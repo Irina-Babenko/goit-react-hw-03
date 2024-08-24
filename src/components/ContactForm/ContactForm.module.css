@@ -38,8 +38,9 @@ label {
 }
 
 .formError {
-  color: rgba(184, 8, 110, 0.897);
-  margin-bottom: 16px;
+  color: rgba(66, 177, 241, 0.897);
+  margin-top: 5px;
+  margin-bottom: 14px;
   font-size: 14px;
 }
 

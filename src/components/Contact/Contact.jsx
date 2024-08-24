@@ -1,4 +1,4 @@
-import { IoPersonOutline, IoPhonePortraitOutline } from 'react-icons/io5';
+import { IoPerson, IoPhonePortrait } from 'react-icons/io5';
 import css from './Contact.module.css';
 
 export default function Contact({ data: { id, name, number }, onDelete }) {
@@ -6,11 +6,11 @@ export default function Contact({ data: { id, name, number }, onDelete }) {
     <div className={css.contactContainer}>
       <ul>
         <li className={css.contactWraper}>
-          <IoPersonOutline />
+          <IoPerson />
           {name}
         </li>
         <li className={css.contactWraper}>
-          <IoPhonePortraitOutline />
+          <IoPhonePortrait />
           {number}
         </li>
       </ul>

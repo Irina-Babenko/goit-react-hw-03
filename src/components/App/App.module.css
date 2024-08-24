@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@0,300..800;1,300..800&display=swap');
+
+.container {
+  max-width: 1440px;
+  height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 5px 15px;
+  background-image: url('/src/assets/bg-img-1.jpg');
+  background-repeat: no-repeat;
+
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+}

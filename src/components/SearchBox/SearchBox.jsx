@@ -4,11 +4,11 @@ import css from './SearchBox.module.css';
 export default function SearchBox({ value, onSearch }) {
   const searchId = useId();
   return (
-    <div className={css.container}>
+    <div className={css.box}>
       <label htmlFor={searchId}>Find contacts by name</label>
       <input
         type="text"
-        className={css.searchInput}
+        className={css.boxInput}
         id={searchId}
         value={value}
         onChange={e => onSearch(e.target.value)}

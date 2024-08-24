@@ -1,6 +1,5 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useId } from 'react';
-import { nanoid } from 'nanoid';
 import * as Yup from 'yup';
 import css from './ContactForm.module.css';
 
@@ -11,11 +10,9 @@ const FeedbackSchema = Yup.object().shape({
     .required('Required'),
   number: Yup.string()
     .matches(
-      /^\d{3}-\d{2}-\d{2}$/,
-      'Неправильний формат номера телефону. Введіть у форматі 123-45-67',
+      /^(\+?\d{1,4}|\(\d{1,4}\))?\s?\d{3}[\s.-]?\d{3}[\s.-]?\d{4}$/,
+      'Invalid phone number format. Supported formats are: +1234567890, (123) 456-7890, 123-456-7890.',
     )
-    .min(9, 'Too Short!')
-    .max(9, 'Too Long!')
     .required('Required'),
 });
 
@@ -27,10 +24,8 @@ const initialValues = {
 export default function ContactForm({ onAdd }) {
   const userNameId = useId();
   const userNumber = useId();
-  const newContactId = nanoid();
 
   const handleSubmit = (values, actions) => {
-    values.id = newContactId;
     onAdd(values);
     actions.resetForm();
   };
